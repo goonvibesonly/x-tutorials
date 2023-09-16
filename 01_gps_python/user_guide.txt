@@ -1,0 +1,26 @@
+## User Guide: Using get_gps_test.py with get_gps.c Library
+
+### Overview
+The `get_gps_test.py` script utilizes the `get_gps.c` library, which is a wrapper for the `gpsd` library, to retrieve GPS data from an antenna connected to your device. This program serves as a demonstration of how to use pointers in Python with `ctypes` and pass them to a C library.
+
+### Dependencies
+Before using this program, ensure you have the following dependencies installed on your system:
+- `gpsd`
+- `gpsd-clients`
+- `python3`
+
+### Usage
+1. Build the `get_gps.c` library by following these steps:
+   - Navigate to the root directory of the project.
+   - Run the following command to build the `get_gps.c` library:
+     ```
+     $ make
+     ```
+   This will compile the `get_gps.c` file into a shared library called `get_gps.so` in the `src` directory.
+
+2. Run the Python script by executing the following command:
+    ```
+    $ python3 get_gps_test.py
+    ```
+    This will run the `get_gps_test.py` script, which will call the `get_gps.c` library to retrieve GPS data from the antenna connected to your device
+    The script will print the GPS data to the terminal.
